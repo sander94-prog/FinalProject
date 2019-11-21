@@ -1,8 +1,9 @@
-<h1>Listing Reservations</h1>
+<h1>Past Reservations</h1>
+<%= link_to 'New Reservation', new_reservation_path %>
 
 <table>
     <tr>
-        <th>Lot</th>
+        <th>Parking Lot</th>
         <th>License</th>
         <th>Make</th>
         <th>Model</th>
@@ -15,6 +16,11 @@
             <td><%= reservation.make %></td>
             <td><%= reservation.model %></td>
             <td><%= link_to 'Show' , reservation_path(reservation) %></td>
+            <td><%= link_to 'Update' , edit_reservation_path(reservation) %></td>
+             <td><%= link_to 'Destroy',
+                                    reservation_path(reservation),
+                                    method: :delete,
+                                    data: { confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
 </table>
