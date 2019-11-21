@@ -1,0 +1,20 @@
+<h1>Listing Reservations</h1>
+
+<table>
+    <tr>
+        <th>Lot</th>
+        <th>License</th>
+        <th>Make</th>
+        <th>Model</th>
+    </tr>
+    
+    <% @reservation.each do |reservation| %>
+        <tr>
+            <td><%= reservation.lot %></td>
+            <td><%= reservation.license %></td>
+            <td><%= reservation.make %></td>
+            <td><%= reservation.model %></td>
+            <td><%= link_to 'Show' , reservation_path(reservation) %></td>
+        </tr>
+    <% end %>
+</table>
