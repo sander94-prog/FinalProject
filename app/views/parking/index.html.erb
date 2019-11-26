@@ -1,0 +1,21 @@
+<h1> Listing parking lot</h1>]
+<%= link_to "Business parking", business_parking_path %>
+
+<table>
+    <tr>
+        <th>Parking lot</th>
+        
+    </tr>
+    
+    <% @business.each do |business| %>
+        <tr>
+            <td><%= business.parking %></td>
+            <td><%= link_to 'Show' , reservation_path(reservation) %></td>
+            <td><%= link_to 'Update' , edit_reservation_path(reservation) %></td>
+             <td><%= link_to 'Destroy',
+                                    reservation_path(reservation),
+                                    method: :delete,
+                                    data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+</table>

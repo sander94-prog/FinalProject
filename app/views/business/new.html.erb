@@ -1,14 +1,14 @@
-<h1>New Parking Lot</h1>
-<%= form_for :buisness, url: buisness_path do |f| %>
+<h1>Business details</h1>
+<%= form_for :business, url: business_path do |f| %>
 
-<% if @buisness.errors.any? %>
+<% if @business.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@buisness.errors.count, "error") %> prohibited
+        <%= pluralize(@business.errors.count, "error") %> prohibited
         this article from being saved:
       </h2>
       <ul>
-        <% @buisness.errors.full_messages.each do |msg| %>
+        <% @business.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -30,4 +30,4 @@
   </p>
  
 <% end %>
-<%= link_to 'Back', buisness_path %>
+<%= link_to 'Back', business_path %>

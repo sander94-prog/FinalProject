@@ -1,0 +1,25 @@
+<h1>Business</h1>
+<%= link_to 'Business details', business_details_path %>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    
+    <% @business.each do |business| %>
+        <tr>
+            <td><%= business.name %></td>
+            <td><%= business.adress %></td>
+            <td><%= link_to 'Show' , reservation_path(reservation) %></td>
+            <td><%= link_to 'Update' , edit_reservation_path(reservation) %></td>
+             <td><%= link_to 'Destroy',
+                                    reservation_path(reservation),
+                                    method: :delete,
+                                    data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+</table>
+
+<%= link_to 'Listing parking lot', business_path %>
+<p>Find me in app/views/business/index.html.erb</p>
