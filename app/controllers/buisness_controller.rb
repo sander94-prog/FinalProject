@@ -12,7 +12,7 @@ class BuisnessController < ApplicationController
     end
     
     def create
-        @buisness = Buisness.new(buisness_path)
+        @buisness = Buisness.new(buisness_params)
         
         if @buisness.save
             redirect_to @buisness
@@ -28,7 +28,7 @@ class BuisnessController < ApplicationController
     def update
         @buisness = Buisness.find(params[:id]) 
         
-        if @buisness.update(buisness_path)
+        if @buisness.update(buisness_params)
             redirect_to @buisness
         else
             render 'edit' 
@@ -36,14 +36,14 @@ class BuisnessController < ApplicationController
     end
     
     def destroy
-        @reservation = Buisness.find(params[:id])
-        @reservation.destroy
+        @buisness = Buisness.find(params[:id])
+        @buisness.destroy
         
         redirect_to buisness_path
     end
 end
 
 private
-def reservation_params
-    params.require(:buisness).permit(:names, :address)
+def buisness_params
+    params.require(:buisness).permit(:name, :address)
 end
