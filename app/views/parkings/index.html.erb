@@ -1,0 +1,22 @@
+<h1>Parking Lots</h1>
+<%= link_to 'New Parking Lot', new_parking_path %>
+
+<table>
+    <tr>
+        <th>Parking Lot</th>
+        <th>Address</th>
+    </tr>
+    
+    <% @parking.each do |parking| %>
+        <tr>
+            <td><%= parking.name %></td>
+            <td><%= parking.address %></td>
+            <td><%= link_to 'Show' , parking_path(parking) %></td>
+            <td><%= link_to 'Update' , edit_parking_path(parking) %></td>
+             <td><%= link_to 'Destroy',
+                                    parking_path(parking),
+                                    method: :delete,
+                                    data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+</table>
