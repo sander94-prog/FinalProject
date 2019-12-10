@@ -1,24 +1,53 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+    background-image: url("https://elitestripers.com/wp-content/uploads/2018/09/28698790_756851741172791_6210396522897067972_o.jpg");
+
+
+  /* Full height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 body {
-  margin: 0;
+  margin: 10;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0px auto;
   padding: 0;
   overflow: hidden;
   background-color: #333;
   position: fixed;
-  top: 0;
+  top: 20;
   width: 100%;
 }
 
@@ -29,11 +58,13 @@ ul {
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: #f2f2f2;;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  
+  
 }
 
 .topnav a:hover {
@@ -54,12 +85,22 @@ ul {
   <a href="parkings">Buisness</a>
   <a href="spots">Parking spaces</a>
 </div>
+<div class="parallax"></div>
+<div style="height:250px;width 100px;font-size:40px;text-align:center;">
+<h1 style="text-align:center;">E-Z Parking</h1>
+
+<div class="parallax"></div>
+
+<div style="height:250px;background;;font-size:20px;text-align:center;">
+<h1 style="text-align:center;font-size:30px;">About E-Z Parking</h1>
+E-Z parking makes it easy for you to find parking at your favorite place.It allows you to search your favorite restaurant, grocery store, and/or buisness of choice. Once you registrate for our service through Google, you will be shown a list of the businesses available in your area. You will be able to access the business information like their address, there ours of service and how many available parking space they have. 
+</div>
+
+<div class="parallax"></div>
+
 
 
 
 </body>
 </html>
-
-<h1>Welcome Back to E-Z Parking!</h1>
-
 
