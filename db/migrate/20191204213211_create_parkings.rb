@@ -3,6 +3,7 @@ class CreateParkings < ActiveRecord::Migration[5.0]
     create_table :parkings do |t|
       t.string :name
       t.text :address
+      t.string :number
 
       t.timestamps
     end
