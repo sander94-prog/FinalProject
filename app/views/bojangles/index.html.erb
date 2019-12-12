@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,39 +48,40 @@ ul {
 <body>
 
 <div class="topnav">
-  <a href="https://46b89afc1cef456197f09442683fa744.vfs.cloud9.us-east-2.amazonaws.com/">Home page</a>
+  <a href="https://46b89afc1cef456197f09442683fa744.vfs.cloud9.us-east-2.amazonaws.com/">Home page</a> 
+  
   <a href="reservations">Customer</a>
-  <a href="lots">Business</a>
+  <a href="bojangles">Business</a>
   
 </div>
 
+
+
 </body>
 </html>
+
 <h1>Parking Lots</h1>
+
 
 <table>
     <tr>
-        <th>Name     </th>
-        <th>Address</th>
-        <th>Available Spots</th>
+        <th>Name </th>
+        <th>Address </th>
+        <th>Number of Spots </th>
     </tr>
     
-    <% @lot.each do |lot| %>
+    <% @bojangle.each do |bojangle| %>
         <tr>
-            <td><%= lot.name %></td>
-            <td><%= lot.address %></td>
-            <td><%= lot.spots %></td>
-            <td><%= link_to 'Show' , lot_path(lot) %></td>
-            <td><%= link_to 'Update' , edit_lot_path(lot) %></td>
+            <td><%= bojangle.name %></td>
+            <td><%= bojangle.address %></td>
+            <td><%= bojangle.spots %></td>
+            <td><%= link_to 'Show' , bojangle_path(bojangle) %></td>
+            <td><%= link_to 'Update' , edit_bojangle_path(bojangle) %></td>
              <td><%= link_to 'Destroy',
-                                    lot_path(lot),
+                                    bojangle_path(bojangle),
                                     method: :delete,
                                     data: { confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
 </table>
-
-<%= link_to 'New Parking Lot', new_lot_path %>
-
-
-
+<%= link_to 'New Parking Lot', new_bojangle_path %>

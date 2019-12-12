@@ -1,6 +1,6 @@
-class CreateLots < ActiveRecord::Migration[5.0]
+class CreateBojangles < ActiveRecord::Migration[5.0]
   def change
-    create_table :lots do |t|
+    create_table :bojangles do |t|
       t.string :name
       t.text :address
       t.string :spots

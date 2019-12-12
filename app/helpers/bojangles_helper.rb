@@ -1,0 +1,2 @@
+module BojanglesHelper
+end

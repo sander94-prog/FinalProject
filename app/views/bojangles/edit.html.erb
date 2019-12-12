@@ -1,15 +1,15 @@
-<h1>Updating Lots</h1>
+<h1>Updating Parking Lots</h1>
 
-<%= form_for :parking, url: parking_path(@parking), method: :patch do |f| %>
+<%= form_for :bojangle, url: reservation_path(@bojangle), method: :patch do |f| %>
  
-  <% if @parking.errors.any? %>
+  <% if @bojangle.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@parking.errors.count, "error") %> prohibited
+        <%= pluralize(@bojangle.errors.count, "error") %> prohibited
         this article from being saved:
       </h2>
       <ul>
-        <% @parking.errors.full_messages.each do |msg| %>
+        <% @bojangle.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -18,12 +18,12 @@
   
   <p>
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_area :name %>
   </p>
  
   <p>
     <%= f.label :address %><br>
-    <%= f.text_area :address %>
+    <%= f.text_field :address %>
   </p>
   
   <p>
@@ -31,9 +31,10 @@
     <%= f.text_field :spots %>
   </p>
   
-   <p>
+  <p>
     <%= f.submit %>
   </p>
  
 <% end %>
-<%= link_to 'Back', parkings_path %>
+
+<%= link_to 'Parking List', bojangles_path %>
