@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,42 +47,39 @@ ul {
 <body>
 
 <div class="topnav">
-  <a href="https://46b89afc1cef456197f09442683fa744.vfs.cloud9.us-east-2.amazonaws.com/">Home page</a> 
-  
+  <a href="https://46b89afc1cef456197f09442683fa744.vfs.cloud9.us-east-2.amazonaws.com/">Home page</a>
   <a href="reservations">Customer</a>
   <a href="lots">Business</a>
   
 </div>
 
-
-
 </body>
 </html>
-
-<h1>Past Reservations</h1>
-
+<h1>Parking Lots</h1>
 
 <table>
     <tr>
-        <th>Parking Lot</th>
-        <th>License</th>
-        <th>Make</th>
-        <th>Model</th>
+        <th>Name     </th>
+        <th>Address</th>
+        <th>Available Spots</th>
     </tr>
     
-    <% @reservation.each do |reservation| %>
+    <% @lot.each do |lot| %>
         <tr>
-            <td><%= reservation.lot %></td>
-            <td><%= reservation.license %></td>
-            <td><%= reservation.make %></td>
-            <td><%= reservation.model %></td>
-            <td><%= link_to 'Show' , reservation_path(reservation) %></td>
-            <td><%= link_to 'Update' , edit_reservation_path(reservation) %></td>
+            <td><%= lot.name %></td>
+            <td><%= lot.address %></td>
+            <td><%= lot.spots %></td>
+            <td><%= link_to 'Show' , lot_path(lot) %></td>
+            <td><%= link_to 'Update' , edit_lot_path(lot) %></td>
              <td><%= link_to 'Destroy',
-                                    reservation_path(reservation),
+                                    lot_path(lot),
                                     method: :delete,
                                     data: { confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
 </table>
-<%= link_to 'New Reservation', new_reservation_path %>
+
+<%= link_to 'New Parking Lot', new_lot_path %>
+
+
+

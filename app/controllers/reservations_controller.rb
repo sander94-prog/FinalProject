@@ -5,11 +5,6 @@ class ReservationsController < ApplicationController
     
     def show
         @reservation = Reservation.find(params[:id])
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 63b1d466fb8ed5f61bbde0fa82c62d336608a81d
     end
     
     def new

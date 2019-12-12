@@ -71,15 +71,14 @@ ul {
     <tr>
         <th>Name     </th>
         <th>Address</th>
-        <th>Parking spots</th>
+        <th>Available Spots</th>
     </tr>
     
     <% @parking.each do |parking| %>
         <tr>
             <td><%= parking.name %></td>
             <td><%= parking.address %></td>
-            
-            
+            <td><%= parking.spots %></td>
             <td><%= link_to 'Show' , parking_path(parking) %></td>
             <td><%= link_to 'Update' , edit_parking_path(parking) %></td>
              <td><%= link_to 'Destroy',

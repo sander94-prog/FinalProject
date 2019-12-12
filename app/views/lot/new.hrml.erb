@@ -1,14 +1,14 @@
 <h1>Parking Lots</h1>
-<%= form_for :parking, url: parkings_path do |f| %>
+<%= form_for :lot, url: lots_path do |f| %>
 
-<% if @parking.errors.any? %>
+<% if @lot.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@parking.errors.count, "error") %> prohibited
+        <%= pluralize(@lot.errors.count, "error") %> prohibited
         this article from being saved:
       </h2>
       <ul>
-        <% @parking.errors.full_messages.each do |msg| %>
+        <% @lot.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -36,4 +36,4 @@
   </p>
  
 <% end %>
-<%= link_to 'Back', parkings_path %>
+<%= link_to 'Back', lots_path %>
