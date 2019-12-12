@@ -1,3 +1,4 @@
+
 <p>
     <strong>Parking Lot:</strong>
     <%= @parking.name %>
@@ -7,4 +8,26 @@
     <strong>Address:</strong>
     <%= @parking.address %>
 </p>
+<h2>Parking Spots</h2>
+<% @parking.spaces.each do |space| %>
+<p>
+    <strong>Parking spots</strong>
+    <%= space.numbers %>
+    
+</p>
+
+<% end %>
+
+<h2>Update number of spots:</h2>
+<%= form_for([@parking, @parking.spaces.build]) do |f| %>
+    <p>
+        <%= f.label :numbers %><br>
+        <%= f.text_field :numbers %><br>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
+    
+<% end %>
 <%= link_to 'Parking List', parkings_path %><br />

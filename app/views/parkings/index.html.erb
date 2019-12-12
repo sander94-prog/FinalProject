@@ -50,10 +50,10 @@ ul {
 <body>
 
 <div class="topnav">
-      
+  <a href="https://46b89afc1cef456197f09442683fa744.vfs.cloud9.us-east-2.amazonaws.com/">Home page</a>
   <a href="reservations">Customer</a>
-  <a href="parkings">Buisness</a>
-  <a href="spots">Parking spaces</a>
+  <a href="parkings">Business</a>
+  
 </div>
 
 
@@ -66,16 +66,20 @@ ul {
 <h1>Parking Lots</h1>
 
 
+
 <table>
     <tr>
-        <th>Parking Lot</th>
+        <th>Name     </th>
         <th>Address</th>
+        <th>Parking spots</th>
     </tr>
     
     <% @parking.each do |parking| %>
         <tr>
             <td><%= parking.name %></td>
             <td><%= parking.address %></td>
+            
+            
             <td><%= link_to 'Show' , parking_path(parking) %></td>
             <td><%= link_to 'Update' , edit_parking_path(parking) %></td>
              <td><%= link_to 'Destroy',

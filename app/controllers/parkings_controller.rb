@@ -45,5 +45,5 @@ end
 
 private
 def parking_params
-    params.require(:parking).permit(:name, :address)
+    params.require(:parking).permit(:name, :address, :number)
 end
