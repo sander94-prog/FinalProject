@@ -45,6 +45,6 @@ end
 
 private
 def bojangle_params
-    params.permit(:name, :address, :spots)
+    params.require(:bojangle).permit(:name, :address, :spots)
 end
 

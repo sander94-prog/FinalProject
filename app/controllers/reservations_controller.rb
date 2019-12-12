@@ -45,5 +45,5 @@ end
 
 private
 def reservation_params
-    params.permit(:lot, :license, :make, :model)
+    params.require(:reservation).permit(:lot, :license, :make, :model)
 end

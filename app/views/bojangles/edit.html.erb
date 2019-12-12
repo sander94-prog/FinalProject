@@ -1,6 +1,6 @@
 <h1>Updating Parking Lots</h1>
 
-<%= form_for :bojangle, url: reservation_path(@bojangle), method: :patch do |f| %>
+<%= form_for :bojangle, url: bojangles_path(@bojangle), method: :patch do |f| %>
  
   <% if @bojangle.errors.any? %>
     <div id="error_explanation">
@@ -37,4 +37,4 @@
  
 <% end %>
 
-<%= link_to 'Parking List', bojangles_path %>
+<%= link_to 'Back', bojangles_path %>
