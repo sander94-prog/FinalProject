@@ -13,7 +13,6 @@ class SpotsController < ApplicationController
     
     def create
         @spot = Spot.new(spot_params)
-        
         if @spot.save
             redirect_to @spot
         else
@@ -26,7 +25,6 @@ class SpotsController < ApplicationController
     
     def update
         @spot = Spot.find(params[:id]) 
-        
         if @spot.update(spot_params)
             redirect_to @spot
         else
